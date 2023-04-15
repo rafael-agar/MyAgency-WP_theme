@@ -39,29 +39,34 @@ style="background-attachment: fixed; background-image: linear-gradient(to bottom
 <!-- WHO WE ARE -->
 <section id="about" class="section-padding">
 
-      <div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
         <div class="row gx-0">
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-          <h1 class="display-4 fw-semibold"><?php echo get_post_meta( get_the_ID(), 'MyAgency_home_who_title', true ); ?></h1>
+            <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <h1 class="display-4 fw-semibold"><?php echo get_post_meta( get_the_ID(), 'MyAgency_home_who_title', true ); ?></h1>
             <div class="p-5 content bg-dark">
-              <p class="text-white">
-              <?php echo get_post_meta( get_the_ID(), 'MyAgency_home_who_text', true ); ?>
-              </p>
+                <p class="text-white">
+                <?php echo get_post_meta( get_the_ID(), 'MyAgency_home_who_text', true ); ?>
+                </p>
             </div>
-          </div>
+            </div>
 
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200"
-          style="webkit-box-shadow: 46px 46px 0px 0px rgba(0,0,0,0.85);
+            <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200"
+            style="webkit-box-shadow: 46px 46px 0px 0px rgba(0,0,0,0.85);
                 -moz-box-shadow: 46px 46px 0px 0px rgba(0,0,0,0.85);
                 box-shadow: 46px 46px 0px 0px rgba(0,0,0,0.85);"
-          >
+            >
             <img src="<?php echo get_post_meta( get_the_ID(), 'MyAgency_home_who_image', true ); ?>" class="img-fluid" alt="">
-          </div>
+            </div>
 
         </div>
-      </div>
 
-    </section><!-- End About Section -->
+        
+
+
+
+    </div>
+
+</section><!-- End About Section -->
 
 
 

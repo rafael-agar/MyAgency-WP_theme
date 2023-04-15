@@ -7,6 +7,9 @@ require_once dirname(__FILE__) . '/cmb2.php';
 // carga campos personalizados
 require_once dirname(__FILE__) . '/inc/custom-fields.php';
 
+//posttypes
+require_once dirname(__FILE__) . '/inc/posttypes.php';
+
 //Queries reutilizables
 require_once dirname(__FILE__) . '/inc/queries-classes.php';
 require_once dirname(__FILE__) . '/inc/queries-instructors.php';
@@ -51,9 +54,9 @@ add_action( 'init', 'myAgency_menus');
 
 //add the style files //////
 function myAgency_register_styles(){
-    $version = wp_get_theme()->get('Version');
-    wp_enqueue_style( 'myAgency-style', get_template_directory_uri() . "/style.css", array('myAgency-bootstrap'), $version, 'all');
-    wp_enqueue_style( 'myAgency-bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css", array(), '5.2.0', 'all');
+    // $version = wp_get_theme()->get('Version');
+    wp_enqueue_style( 'myAgency-bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css", false, '5.2.0');
+    wp_enqueue_style( 'myAgency-style', get_stylesheet_uri(), array('myAgency-bootstrap'));
     wp_enqueue_style( 'myAgency-remicicon', "https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css", array(), '2.5.0', 'all');
     wp_enqueue_style( 'myAgency-fancybox', "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css", array(), '2.5.0', 'all');
     wp_enqueue_style( 'myAgency-aos', "https://unpkg.com/aos@next/dist/aos.css", array(), '', 'all');

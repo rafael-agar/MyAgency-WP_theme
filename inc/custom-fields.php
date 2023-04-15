@@ -600,6 +600,7 @@ function MyAgency_classes() {
 
 /**************** INSTRUCTORS **********************/
 
+
 add_action( 'cmb2_admin_init', 'MyAgency_instructors' );
 /**
  * Hook in and add a metabox that only appears on the 'Contactt' page
@@ -613,8 +614,8 @@ function MyAgency_instructors() {
 	 */
 	$MyAgency_instructors_content = new_cmb2_box( array(
 		'id'           => $prefix . 'metabox',
-		'title'        => esc_html__( 'Instructor info', 'cmb2' ),
-		'object_types' => array( 'Instructors' ), // Post type
+		'title'        => esc_html__( 'Chef info', 'cmb2' ),
+		'object_types' => array( 'instructors' ), // Post type
 		'context'      => 'normal',
 		'priority'     => 'high',
 		'show_names'   => true,
@@ -625,6 +626,7 @@ function MyAgency_instructors() {
 		// ), // Specific post IDs to display this metabox
 	) );
 
+
 	$MyAgency_instructors_content->add_field( array(
 		'name' => esc_html__( 'Email address', 'cmb2' ),
 		'desc' => esc_html__( 'Add email address', 'cmb2' ),
@@ -633,28 +635,28 @@ function MyAgency_instructors() {
 	) );
 
 	$MyAgency_instructors_content->add_field( array(
-		'name'    => esc_html__( 'Review', 'cmb2' ),
-		'desc'    => esc_html__( 'Add Review', 'cmb2' ),
+		'name'    => esc_html__( 'Description Text', 'cmb2' ),
+		'desc'    => esc_html__( 'Add a Instructor description', 'cmb2' ),
 		'id'      => $prefix . 'review_instructor',
 		'type'    => 'wysiwyg',
 		'options' => array(
-			'textarea_rows' => 1,
+			'textarea_rows' => 4,
 		),
 	) );
 
-
 	$MyAgency_instructors_content->add_field( array(
-		'name' => esc_html__( 'Class', 'cmb2' ),
-		'desc' => esc_html__( 'Add Class', 'cmb2' ),
-		'id'   => $prefix . 'instructor_class',
+		'name' => esc_html__( 'Instructor', 'cmb2' ),
+		'desc' => esc_html__( 'Add Instructor', 'cmb2' ),
+		'id'   => $prefix . 'Instructor_class',
 		'limit' => 10,
 		'type' => 'post_search_ajax',
 		'query_args'	=> array(
-			'post_type'			=> array( 'myclasses_clases' ), //class post type
+			'post_type'			=> array( 'myclasses_clases' ), //instructor post type
 			'post_status'		=> array( 'publish' ),
 			'posts_per_page'	=> -1
 		)
 	) );
+
 
 }
 

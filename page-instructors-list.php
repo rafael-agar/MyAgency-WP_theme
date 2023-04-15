@@ -21,7 +21,7 @@
         <h1 class="display-4 fw-semibold text-center"><?php echo $titulo; ?></h1>
         <div class="line"></div>
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <?php myagency_query_instructors(); ?>
             </div>
         </div>

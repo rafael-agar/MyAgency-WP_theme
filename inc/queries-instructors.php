@@ -10,28 +10,31 @@ function myagency_query_instructors($cantidad_inst = -1){
 
     while($instructors->have_posts()): $instructors->the_post(); ?>
     
-        <div class="container">
-            <div class="card_instructor card mb-3" style="width: 1000px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                    <?php the_post_thumbnail('none',array('class','img-fluid')) ?>
+
+
+
+
+                <div class="box col-md-6 m-3 ">
+                    <div class="box-top">
+                        <?php the_post_thumbnail('none',array('class','img-fluid box-image')) ?>
+                    <div class="title-flex">
+                        <h3 class="box-title"><?php the_title(); ?></h3>
+                        <!-- <p class="user-follow-info">17 Projects</p> -->
                     </div>
-                    <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                        <?php the_title(); ?>
-                        </h5>
-                        <p class="card-text">
-                        <?php echo get_post_meta(get_the_ID(), 'MyAgency_instructors_review_instructor', true); ?>
-                        </p>
-                        <p class="card-text"><small class="text-muted">
-                        <?php echo get_post_meta(get_the_ID(), 'MyAgency_instructors_instructor_email', true); ?>
-                        </small></p>
+                    <p class="description">
+                    <?php echo get_post_meta(get_the_ID(), 'MyAgency_instructors_review_instructor', true); ?>
+                    </p>
                     </div>
-                    </div>
+                    <a 
+                        href="<?php echo get_post_meta(get_the_ID(), 'MyAgency_instructors_instructor_email', true); ?>" 
+                        class="button">
+                        Follow Kelsie
+                    </a>
                 </div>
-            </div>
-        </div>
+
+
+
+
 
         
 
