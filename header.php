@@ -47,7 +47,7 @@
                         );
                     ?>
 
-                    <a href="#" class="btn btn-brand ms-lg-3">Download</a>
+                    <a href="<?php echo site_url('/contact'); ?>" class="btn btn-brand ms-lg-3">Contact</a>
                 </div>
             </div>
 

@@ -35,6 +35,7 @@ function myAgency_theme_support(){
     // Image Sizes
     add_image_size('medium', 510, 340, true);
     add_image_size('square', 450, 450, true);
+    add_image_size('blog', 1000, 1000, true);
     
 }
 add_action( 'after_setup_theme', 'myAgency_theme_support');
@@ -54,9 +55,9 @@ add_action( 'init', 'myAgency_menus');
 
 //add the style files //////
 function myAgency_register_styles(){
-    // $version = wp_get_theme()->get('Version');
+    $version = wp_get_theme()->get('Version');
     wp_enqueue_style( 'myAgency-bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css", false, '5.2.0');
-    wp_enqueue_style( 'myAgency-style', get_stylesheet_uri(), array('myAgency-bootstrap'));
+    wp_enqueue_style( 'style', get_stylesheet_uri(), array(), $version);
     wp_enqueue_style( 'myAgency-remicicon', "https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css", array(), '2.5.0', 'all');
     wp_enqueue_style( 'myAgency-fancybox', "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css", array(), '2.5.0', 'all');
     wp_enqueue_style( 'myAgency-aos', "https://unpkg.com/aos@next/dist/aos.css", array(), '', 'all');
