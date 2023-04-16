@@ -62,7 +62,7 @@
     </article><!-- End blog entry -->
 
     </div><!--.row-->
-</main>
+</section>
 
 
 
